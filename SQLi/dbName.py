@@ -3,6 +3,8 @@ from bs4 import BeautifulSoup
 import re
 import sys
 
+## substring payload !!
+
 proxies = {
 	'http':'http://127.0.0.1:8080',
 	'https':'http://127.0.0.1:8080'
